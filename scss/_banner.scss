@@ -1,0 +1,102 @@
+.banner_main{
+     position: relative;
+     height: 100vh;
+     max-height: 100vh;
+     overflow: hidden !important;
+     video{
+         width: 100% !important;
+     }
+      .banner_wrapper{
+        .banner_wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%; 
+            z-index: 99;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+             .banner_text{
+                  h4{
+                      font-size:36px;
+                      color: $white;
+                      font-weight: 600;
+                      line-height: 46px;
+                      span{
+                          font-family: $font2;
+                          font-size: 45px;
+                          font-weight: 700;
+                      }
+                  }
+                  h5{
+                    font-size:45px;
+                    color: $white;
+                    font-weight: 700;
+                    padding-top: 10px;
+                    line-height: 55px;
+                }
+               
+             }
+             .register_btn{
+                 padding-top: 40px;
+                 a{
+                     padding: 12px 50px;
+                     background: #f8022c;
+                     color: $white;
+                     font-size: 20px; 
+                     font-weight: 500;
+                     border-radius: 30px;
+                     text-transform: uppercase;
+                 }  
+             }
+             .offer{
+                padding: 10px 32px;
+                text-align: center;
+                z-index: 99;
+                margin-top: 40px;
+                ul{
+                    li{
+                        display: inline-block;
+                        margin: 0 10px;
+                        height: 120px;
+                        width: 110px;
+                        border-radius:20px;
+                        position: relative;
+                       h5{
+                        text-align: center;
+                        font-size: 28px;
+                        font-weight: 600;
+                        font-family: $font1;
+                        color: $white; 
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        br{
+                            margin: 5px 0;
+                        }
+
+                    }
+                    }
+                    .demo1Bg{
+                        background: linear-gradient(to bottom, #791492 0%, #f13bfa 100%);
+                        opacity: 80%;
+                    }
+                    .demo2Bg{
+                        background: linear-gradient(to bottom, #a14c22 0%, #f55d14 100%);
+                        opacity: 80%;
+                    } 
+                    .demo3Bg{
+                        background: linear-gradient(to bottom, #1d5d89 0%, #0dabe6 100%);
+                        opacity: 80%;
+                    }
+                    .demo4Bg{
+                        background: linear-gradient(to bottom, #135242 0%, #046e52 100%);
+                        opacity: 80%;
+                    }
+                }
+            }
+            }
+     }
+}
