@@ -54,7 +54,7 @@ if (isset($_POST)) {
     $res = json_decode($response);
     curl_close($ch);
     $id = strtotime("now");
-    if ($res->status) {
+    if ($res->status && $_POST['payment_method'] == '1') {
         try {
             $checkout = $stripePayment->checkout($id, $_POST['email'], $_POST['sponsor_name'], $amount, "http://localhost/bmana-convention/success.php", "http://localhost/bmana-convention/cancel.php");
             $sponsor = array(
@@ -67,5 +67,7 @@ if (isset($_POST)) {
         } catch (\Throwable $th) {
             echo $th->getMessage();
         }
+    } else {
+        header('Location: index.php');
     }
 }

@@ -37,61 +37,70 @@
                 <div class="row">
                   <div class="col-lg-6 d-flex justify-content-between ">
                     <label for="input"> First Name </label>
-                    <input type="text" name="first_name" class="form_control " placeholder="First Name">
+                    <input type="text" name="first_name" class="form_control " placeholder="First Name" required>
                   </div>
                   <div class="col-lg-6 d-flex justify-content-between ">
                     <label for="input"> Last Name </label>
-                    <input type="text" name="last_name" class="form_control " placeholder="Last Name">
+                    <input type="text" name="last_name" class="form_control " placeholder="Last Name" required>
                   </div>
                   <div class="col-lg-12 d-flex justify-content-between mt-3">
                     <label for="input"> Address :</label>
-                    <input type="text" name="address" class="form_control w-85 " placeholder="Address">
+                    <input type="text" name="address" class="form_control w-85 " placeholder="Address" required>
                   </div>
                   <div class="col-lg-4 d-flex justify-content-between mt-3">
                     <label for="input"> City :</label>
-                    <input type="text" name="city" class="form_control " placeholder="City">
+                    <input type="text" name="city" class="form_control " placeholder="City" required>
                   </div>
                   <div class="col-lg-4 d-flex justify-content-between mt-3">
                     <label for="input"> State :</label>
-                    <input type="text" name="state" class="form_control " placeholder="State">
+                    <input type="text" name="state" class="form_control " placeholder="State" required>
                   </div>
                   <div class="col-lg-4 d-flex justify-content-between mt-3">
                     <label for="input"> Zip :</label>
-                    <input type="text" name="zip" class="form_control " placeholder="Zip">
+                    <input type="text" name="zip" class="form_control " placeholder="Zip" required>
                   </div>
                   <div class="col-lg-12 mt-3 d-flex justify-content-between">
                     <label for="input" name="telephone" style="font-weight:700;"> Telephone -:</label>
                   </div>
                   <div class="col-lg-4 mt-1 d-flex justify-content-between">
                     <label for="input"> Cell :</label>
-                    <input type="text" name="cell" class="form_control" placeholder="Cell">
+                    <input type="text" name="cell" class="form_control" placeholder="Cell" required>
                   </div>
                   <div class="col-lg-4 mt-1 d-flex justify-content-between">
                     <label for="input"> Home :</label>
-                    <input type="text" name="home" class="form_control" placeholder="Home">
+                    <input type="text" name="home" class="form_control" placeholder="Home" required>
                   </div>
                   <div class="col-lg-4 mt-1 d-flex justify-content-between">
                     <label for="input"> Office :</label>
-                    <input type="text" name="office" class="form_control" placeholder="Office">
+                    <input type="text" name="office" class="form_control" placeholder="Office" required>
                   </div>
                   <div class="col-lg-12 mt-3 d-flex justify-content-between mb-3">
                     <label for="input"> E-mail :</label>
-                    <input type="text" name="email" class="form_control w-85" placeholder="Email">
+                    <input type="text" name="email" class="form_control w-85" placeholder="Email" required>
+                  </div>
+                  <div class="col-lg-6 mt-4 mb-4 d-flex align-items-center">
+                    <input name="registration" value="120" class="checked cheque" type="radio" required>
+                    <label class="p-none" for="registration"><b> Registration - Life & Active Members<span>($120.00)</span></b></label>
+                  </div>
+                  <div class="col-lg-6 mt-4 mb-4 d-flex align-items-center">
+                    <input name="registration" value="0" class="checked cheque" type="radio" required style="width: 8%;">
+                    <label class="p-none" for="registration"><b> Registration - Associate Member
+                        & Physicians who are not in career path <span>(waived)</span></b></label>
                   </div>
                   <div class="col-lg-6 mt-4 d-flex align-items-center ">
-                    <input name="membership" value="400" class="checked cheque" type="radio">
+                    <input name="membership" value="400" class="checked cheque" type="radio" required>
                     <label class="p-none" for="400"><b> New Life Membership <span>($400 .00)</span></b></label>
                   </div>
                   <div class="col-lg-6 mt-4 d-flex align-items-center">
-                    <input name="membership" value="0" class="checked cheque" type="radio">
+                    <input name="membership" value="0" class="checked cheque" type="radio" required>
                     <label class="p-none" for="0"><b> Existing Life Members <span>(00 .00)</span></b></label>
                   </div>
                   <div class="col-lg-6 mt-4 d-flex align-items-center">
-                    <input name="membership" value="50" class="checked cheque" type="radio">
+                    <input name="membership" value="50" class="checked cheque" type="radio" required>
                     <label class="p-none" for="50"><b> Active Membership <span>($50 .00/yr)</span></b></label>
                   </div>
                   <div class="col-lg-6 mt-4 d-flex align-items-center">
-                    <input name="membership" value="25" class="checked cheque" type="radio">
+                    <input name="membership" value="25" class="checked cheque" type="radio" required>
                     <label class="p-none" for="25"><b> Associate Membership <span>($25 .00/yr)</span> </b></label>
                   </div>
 
@@ -138,7 +147,7 @@
                     </div>
                     <div class="col-lg-6">
                       <h4>July 3, 2022</h4>
-                      <label for="picnic40"> <input name="picnic" value="40" class="checked cheque" type="radio">
+                      <label for="picnic40"> <input name="picnic" value="40" class="checked cheque" type="radio" required>
                         <b> Picnic (July 3, 2022)
                           All Adults and Children 12 and up <span class="memberSpan">$40/person</span></b>
                       </label>
@@ -147,9 +156,7 @@
 
 
 
-                  <div id="guest-container">
-
-                  </div>
+                  <div id="guest-container"></div>
 
                   <input value="$0.00" readonly="readonly" type="text" name="total" class="d-none" />
                   <div class="save_btn">
@@ -162,18 +169,18 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="table_item">
-                          <h5> <input name="mambership" class="cheque" type="radio"> Online Payment</h5>
+                          <h5> <input name="payment_method" class="cheque" type="radio" value="1" required> Online Payment</h5>
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="table_item">
-                          <h5> <input name="mambership" class="cheque" type="radio"> Offline Payment</h5>
+                          <h5> <input name="payment_method" class="cheque" type="radio" value="0" required> Offline Payment</h5>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="continue_btn text-center mt-3">
-                    <button class="btn btn-dark" type="submit" id="SubmitForm"> <img src="images/logo.png" alt="" height="15%" width="15%">
+                    <button class="btn btn-dark" type="submit" id="SubmitForm" name="attendence_register" value="true"> <img src="images/logo.png" alt="" height="15%" width="15%">
                       Register Now</button>
                   </div>
                 </div>
@@ -202,9 +209,9 @@
                       <div class="row">
                         <div class="col-lg-4">
                           <label for="input"> Name :</label>
-                          <input type="text" name="guest_name[]" class="form_control" placeholder="Guest Name">
+                          <input type="text" name="guest_name[]" class="form_control" placeholder="Guest Name" required>
                           <label for="input" class="mt-3"> Email :</label>
-                          <input type="text" name="guest_email[]" class="form_control" placeholder="Guest Emali">
+                          <input type="text" name="guest_email[]" class="form_control" placeholder="Guest Emali" required>
                         </div>
                         <div class="col-lg-8">
                           <h4>July 1, 2022</h4>
