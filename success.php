@@ -68,7 +68,7 @@ if (isset($_SESSION['attendee'])) {
         $result = json_decode($response);
         if ($result->status == 1) {
             unset($_SESSION['sponsor']);
-            header('Location: thankyou.php');
+            header('Location: pdf.php');
         }
     }
 }

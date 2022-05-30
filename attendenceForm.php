@@ -169,12 +169,12 @@
                     <div class="row">
                       <div class="col-lg-6">
                         <div class="table_item">
-                          <h5> <input name="payment_method" class="cheque" type="radio" value="1" required> Online Payment</h5>
+                          <h5> <input name="payment_method" class="cheque" type="checkbox" value="1" checked> Online Payment</h5>
                         </div>
                       </div>
                       <div class="col-lg-6">
                         <div class="table_item">
-                          <h5> <input name="payment_method" class="cheque" type="radio" value="0" required> Offline Payment</h5>
+                          <h5> <input name="payment_method" class="cheque" type="checkbox" value="0"> Offline Payment</h5>
                         </div>
                       </div>
                     </div>
@@ -194,6 +194,7 @@
   </div>
   </div>
 </section>
+<?php include("./include/footer.php"); ?>
 
 
 <script src="js/jquery-3.6.0.min.js"></script>

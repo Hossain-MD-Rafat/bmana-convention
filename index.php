@@ -29,7 +29,7 @@ $_SESSION['ms_id'] = $ms_id;
      <div class="banner_main">
             <div class="banner_slider">
             <video  autoplay muted loop id="myVideo">`
-          <source src="./images/icfai.mp4" type="video/mp4">
+          <source src="images/icfai.mp4" type="video/mp4">
           </video>
             </div>
           <div class="container">
@@ -490,4 +490,6 @@ $_SESSION['ms_id'] = $ms_id;
 </section>
 <!--           Discussion  Part End
      *****************************************--> 
+
 <?php include('./include/footer.php'); ?>
+<script src="js/custom.js"></script>

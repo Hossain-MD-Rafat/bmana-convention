@@ -110,7 +110,7 @@ if (distance < 0) {
   clearInterval(x);
   document.getElementById("demo").innerHTML = "EXPIRED";
 }
-},0);
+},1000);
 
 function Utils() {}
   Utils.prototype = {

@@ -157,6 +157,7 @@ if (isset($_POST['attendence_register'])) {
     }
     $query['taken_services'] = json_encode($taken_services);
     $query['amount'] = $amount;
+    $_SESSION['pdfData'] = $query;
     curl_setopt($ch, CURLOPT_URL, 'https://icircles.app/api/convension/attendee_registration/');
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($query));

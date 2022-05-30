@@ -1,3 +1,16 @@
+<?php
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://icircles.app/api/medicalassociation/home/166');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+$result = json_decode($response);
+curl_close($ch);
+$foot_nav = $result->data->foot_nav;
+$ms_info = $result->data->ms_info;
+?>
+
+
+
 <!--         Modal-2
      *****************************************-->
 <section id="modal_1">
@@ -387,7 +400,6 @@
 </section>
 
 
-
 <!--          Copyright Part Start
      *****************************************-->
 <section id="footer">
@@ -399,12 +411,22 @@
                               <h4>@copyright 2022. All Rights Reserved by iCircles USA Bangladesh Ltd.</h4>
                          </div>
                          <div class="col-lg-5 d-flex justify-content-end align-items-center">
-                              <h4> <a href="#">Privecy</a> <a href="#">Service</a> <a href="#"> Terms</a></h4>
+                              <h4>
+                                   <?php foreach ($foot_nav as $key => $item) { ?>
+                                        <a href=<?= "page/?id=" . $item->id ?>><?= $item->menu_name ?></a>
+                                   <?php } ?>
+                              </h4>
                               <div class="icon">
                                    <ul>
-                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                        <?php if ($ms_info->fb_url) { ?>
+                                             <li><a href=<?= $ms_info->fb_url ?>><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <?php } ?>
+                                        <?php if ($ms_info->linkedin_url) { ?>
+                                             <li><a href=<?= $ms_info->linkedin_url ?>><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <?php } ?>
+                                        <?php if ($ms_info->twiter_url) { ?>
+                                             <li><a href=<?= $ms_info->twiter_url ?>><i class="fa-brands fa-twitter"></i></a></li>
+                                        <?php } ?>
                                    </ul>
                               </div>
                          </div>
@@ -428,7 +450,7 @@
    --------------------------------------------------->
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="js/custom.js"></script>
+
 
 <script>
      function registration(e) {
